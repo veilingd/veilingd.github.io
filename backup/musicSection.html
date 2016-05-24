@@ -1,0 +1,34 @@
+			<div class="well">
+				<div><!-- music section -->
+				   <!--Nav tabs -->
+				  <ul id="songTabsButtonList" class="nav nav-pills" role="tablist">
+				    <li ng-repeat="song in site.songs" role="presentation">
+				    	<a href="#{{$index}}" aria-controls="{{$index}}" role="tab" data-toggle="tab">{{song.displayName}}</a>
+				    </li>
+				  </ul>
+				   <!--Tab panes -->
+				  <div id="songTabsContentList" class="tab-content">
+			  		<div ng-repeat="song in site.songs" role="tabpanel" class="tab-pane fade">
+			  			<br />
+			  			<div class="row">
+			  				<div class="col-xs-12 col-md-8">
+			          	<p>
+				          	<audio class="isAudioPlayer" preload="metadata" controls>
+										  <source type="audio/ogg" ng-src="{{song.oggFileName}}" />
+										  <source type="audio/mpeg" ng-src="{{song.mp3FileName}}" />
+										</audio>
+									</p>
+			          </div>
+			          <div class="col-xs-12 col-md-4">
+			          	<p class="text-left">
+			          	<div class="btn-group btn-group-justified">
+			          		<a class="btn btn-default" role="button" href="{{song.mp3FileName}}" download><span class="glyphicon glyphicon-save"></span> mp3</a>
+			          		<a class="btn btn-default" role="button" href="{{song.oggFileName}}" download><span class="glyphicon glyphicon-save"></span> ogg</a>
+			          	</div>
+			          	</p>
+			          </div>
+			        </div>
+			  		</div>
+				  </div>
+				</div><!-- end of music section -->
+			</div><!-- end of well -->

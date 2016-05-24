@@ -1,0 +1,57 @@
+@media (min-width: 762px) {
+    body
+    {
+        background: url(/img/siteBackground.jpg);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}
+@media (max-width: 761px) {
+    body
+    {
+        background: #C0C0C0;
+        background: linear-gradient(hsla(30, 0%, 100%, 1), hsla(0, 0%, 0%, 1));
+    }
+}
+img 
+{
+    margin-top: 1.5em;
+	margin-bottom: 3.0em;
+}
+hr
+{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+	width: 100%;
+} 
+
+/* custom IDs and classes */
+.hasAudioPlayer /* only for fixed width player that is not currently used */
+{
+	width: 300px;
+}
+.custom-padding /* align the song names with the download buttons */
+{
+	padding-top: 0.5em;
+}
+.custom-margin /* for mobile: some space between accordeon and song section */
+{
+	margin-top: 1.5em;
+}
+.custom-btn-margin
+{
+    margin-bottom: 1.0em;
+}
+#infos a, #infos h3 /* used to override the link and heading colors */
+{
+	color: #1c94c4;
+}
+.squareList
+{
+    list-style-type: square;
+}
