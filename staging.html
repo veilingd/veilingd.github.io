@@ -11,246 +11,322 @@
 <title>Veiling Distress</title>
 <link rel="icon" href="img/favicon.ico">
 <link rel="canonical" href="https://veilingd.github.io/">
-
-<style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    position: fixed;
-    top: 0px;
-    padding: 0;
-    margin: 0;
-    z-index: 3;
-  }
-  
-  header nav {
-    display: flex;
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-  }
-  
-  header nav a {
-    width: 20vw;
-    height: 15vmin;
-    padding: 0;
-    margin: 0;
-    border-left: 1px solid black;
-    text-align: center;
-    text-decoration: none;
-    background-color: lightgrey;
-    color: black;
-    vertical-align: middle;
-    line-height: 14vmin;
-  }
-  
-  a:active {
-    background-color: grey;
-  }
-  
-  header nav :first-child {
-    background-color: black;
-  }
-  
-  header nav a img {
-    width: 15vmin;
-  }
-  
-  main {
-    padding: 0 5px 0 5px;
-    margin: 15vmin 0 15vmin 0;
-  }
-
-  main > * {
-    display: none;
-  }
-  
-  main > *:last-child {
-    display: block;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1) }
-    50% { transform: scale(1.05) }
-    100% { transform: scale(1) }
-  }
-
-  main > *:target {
-    display: block;
-    /*animation: pulse 0.5s linear 1;*/
-  }
-
-  main > *:target ~ * {
-    display: none;
-  }
-  
-  main div h1 {
-    text-align: center;
-  }
-  
-  main audio {
-    /*max-width: 90vw;*/
-  }
-  
-  iframe {
-    border: 5;
-  }
-  
-  footer {
-    position: fixed;
-    bottom: 0px;
-    /*background-color: lime;*/
-    padding: 0;
-    margin: 0;
-  }
-  
-  footer nav {
-    display: flex;
-    padding: 0;
-    margin: 0;
-  }
-  
-  footer nav a {
-    width: 25vw;
-    height: 15vmin;
-    padding: 0;
-    margin: 0;
-    border-left: 1px solid black;
-    text-align: center;
-    text-decoration: none;
-    background-color: lightgrey;
-    color: black;
-    /*vertical-align: middle;*/
-    line-height: 14vmin;
-  }
-  
-  footer nav :first-child {
-    border-left: 0;
-  }
-  
-</style>
+<!-- local css imports -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/audioplayer.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
 
-<header>
-  <nav role="navigation">
-    <a href="staging.html"><img src="img/logo.jpg" alt="Veiling Distress logo" /></a>
-    <a href="#song4">song4</a>
-    <a href="#song3">song3</a>
-    <a href="#song2">song2</a>
-    <a href="#song1">song1</a>
-  </nav>
-</header>
+<div class="container-fluid">
 
-<main role="main">
-  <div id="news">
-    <a role="button" href="mailto:veilingdistress@gmx.net?subject=Veiling Distress">Mail uns!</a>
-    oder
-    <a role="button" href="https://www.facebook.com/veiling.distress" target="_blank">facebook</a>
-    <p>
-      veilingdistress@gmx.net
-    </p>
-  
-    <p>
-      Suchen momentan eine/n Sänger/IN. Sind für jede Anfrage oder auch Werbung hierfür dankbar. Du solltest: 
-      <ul>
-        <li>
-          zwischen 20 und 35 Jahre alt sein
-        </li>
-        <li>
-          shouten/growlen und auch gern clean singen können
-        </li>
-        <li>
-          wöchentlich in Rostock proben können
-        </li>
-      </ul>
-    </p>
-  </div>
-  <div id="members">
-    <dl>
-      <dt>Genre</dt>
-      <dd>Melodic Death Metal</dd>
-      <dt>Members</dt>
-      <dd>1 x Drums, 2 x Guitars, 1 x Bass</dd>
-      <dt>Hometown</dt>
-      <dd>Rostock</dd>
-    </dl>
-  </div>
-  <div id="bio">
-    <h1>Biografie</h1>
-    <p>
-      <em>
-        Am grauen Strand, am grauen Meer<br>
-        Und seitab liegt die Stadt…
-      </em>
-    </p>
-    <p>
-      In Rostock gründete sich im Dezember 2006 die Gruppe „Acedia“. 
-      Fünf Musiker fanden ihren Sound zwischen zähfließendem Doom 
-      und den Harmonien im Melodic Death Metal. Es folgte der Gang 
-      in die Shredsound Studios, wo die unveröffentlicht gebliebene 
-      Demo-CD „Sorrow after Sunset“ (2008) entstand, die damals zugleich 
-      auch den vorläufigen Schlusspunkt für das Projekt bedeutete.
-    </p>
-    <p>
-      Seit dem Jahr 2014 stehen Dennis (git), Stephan (git) und Marc 
-      (dru) wieder zusammen am Equipment. Neue Songs entstehen – und 
-      trotz höherem Tempo und der Brutalität von Blastbeats ist der 
-      Sound der Vergangenheit noch immer Teil der Musik. Mit Fabian 
-      (bass) kam von Ende 2015 bis Ende 2016 Verstärkung in den tiefen Oktaven hinzu. Seit 2017 füllt Paul (bass) diesen Frequenzbereich. 
-      Eine passende menschliche Stimme wird in Zukunft das bisher 
-      rein instrumentale Projekt komplettieren. Was jetzt in Rostock 
-      entsteht, ist „Veiling Distress“.
-    </p>
-  </div>
-  <!--<div id="chat">-->
-  <!--  <h1>Moderiertes Nachrichtenlieferband</h1>-->
-  <!--  <iframe width="100%" src="https://great-shade.glitch.me/"></iframe>-->
-  <!--</div>-->
-  <div id="song1">
-  <h1>Song 1</h1>
-    <audio preload="none" controls>
-      <source type="audio/ogg" src="sound/song1.ogg" />
-      <source type="audio/mpeg" src="sound/song1.mp3" />
-    </audio>
-  </div>
-  <div id="song2">
-    <h1>Song 2</h1>
-    <audio preload="none" controls>
-      <source type="audio/ogg" src="sound/song2.ogg" />
-      <source type="audio/mpeg" src="sound/song2.mp3" />
-    </audio>
-  </div>
-  <div id="song3">
-    <h1>Song 3</h1>
-    <audio preload="none" controls>
-      <source type="audio/ogg" src="sound/song3.ogg" />
-      <source type="audio/mpeg" src="sound/song3.mp3" />
-    </audio>
-  </div>
-  <div id="song4">
-    <h1>Song 4</h1>
-    <audio preload="none" controls>
-      <source type="audio/ogg" src="sound/song4.ogg" />
-      <source type="audio/mpeg" src="sound/song4.mp3" />
-    </audio>
-  </div>
-</main>
+	<div class="row"><!-- begin row -->
+		<div class="col-xs-12 col-md-12 custom-margin">
 
-<footer>
-  <nav role="navigation">
-      <a href="#news">news</a>
-      <a href="#members">members</a>
-      <a href="#bio">bio</a>
-      <a href="#chat">chat</a>
-  </nav>
-</footer>
+			<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo" />
+
+		</div>
+	</div><!-- end row -->
+
+	<div class="row"><!-- begin row -->
+		<div class="col-md-3">
+
+		</div>
+		<div class="col-xs-12 col-md-6">
+
+			<div class="well">
+				<div><!-- music section -->
+					<style>
+					  #audioPlayer {
+						margin: 0 auto;
+						width: 100%;
+				/*         background: lime; */
+					  }
+					  audio {
+						width: 100%;
+					  }
+					  #customControls {
+						background: #333;
+						display: none;
+						grid-template-rows: 45px;
+						grid-template-columns: repeat(4, 1fr);
+					  }
+					  #playPauseButton {
+						width: 100%;
+					  }
+					  #play {
+						display: block;
+						width: 45px;
+					  }
+					  #pause {
+						display: none;
+						width: 45px;
+					  }
+					  #nextButton {
+						width: 45px;
+				/*         background: red; */
+					  }
+					  #songTitle {
+						  color: white;
+						  font-size: 25px;
+						  text-align: center;
+						  margin: auto 0;
+				/*         background: green; */
+					  }
+					  #download {
+						width: 45px;
+				/*         background: lime; */
+					  }
+					</style>
+
+					<div id="audioPlayer">
+					  <audio src="https://veilingd.github.io/sound/song1.mp3" controls></audio>
+					  <div id="customControls">
+						<div id="playPauseButton">
+						  <svg id="play" viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<polygon points="25 25 75 50 25 75"
+								stroke="white" fill="white" stroke-width="5"/>
+						  </svg>
+						  <svg id="pause" viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<line x1="35" y1="25" x2="35" y2="75" stroke="white" stroke-width="5" />
+							<line x1="65" y1="25" x2="65" y2="75" stroke="white" stroke-width="5" />
+						  </svg>
+						</div>
+						<svg id="nextButton" viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+						  <line x1="35" y1="25" x2="60" y2="50" stroke="white" stroke-width="5" />
+						  <line x1="35" y1="75" x2="60" y2="47" stroke="white" stroke-width="5" />
+						  <line x1="65" y1="25" x2="65" y2="75" stroke="white" stroke-width="5" />
+						</svg>
+						<div>
+						  <span id="songTitle">
+							song1
+						  </span>
+						</div>
+						<a id="download" role="button" href="https://veilingd.github.io/sound/song1.mp3" download>
+						  <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+							<line x1="50" y1="25" x2="50" y2="75" stroke="white" stroke-width="5" />
+							<line x1="25" y1="50" x2="50" y2="75" stroke="white" stroke-width="5" />
+							<line x1="75" y1="50" x2="50" y2="75" stroke="white" stroke-width="5" />
+							<line x1="25" y1="75" x2="75" y2="75" stroke="white" stroke-width="5" />
+						  </svg>
+						</a>
+					  </div>
+					</div>
+
+					<script>
+						window.onload = () => {
+						    const audioDiv = document.getElementById('audioPlayer');
+
+						  class AudioPlayer {
+							constructor(audioDiv) {
+							  // prepare element vars
+							  this.audioElement = audioDiv.querySelector('audio');
+							  this.customControls = document.getElementById('customControls');
+							  this.playPauseButton = document.getElementById('playPauseButton');
+							  this.playSvg = document.getElementById('play');
+							  this.pauseSvg = document.getElementById('pause');
+							  this.nextButton = document.getElementById('nextButton');
+							  this.titleDiv = document.getElementById('songTitle');
+							  this.download = document.getElementById('download');
+
+							  // replace controls
+							  this.audioElement.removeAttribute('controls');
+							  this.customControls.style.display = 'grid';
+
+							  // initialize state
+							  this.playing = false;
+							  this.registerEvents();
+							  this.playlist = [
+								'https://veilingd.github.io/sound/song1.mp3',
+								'https://veilingd.github.io/sound/song2.mp3',
+								'https://veilingd.github.io/sound/song3.mp3',
+								'https://veilingd.github.io/sound/song4.mp3'
+							  ]
+							}
+
+							registerEvents() {
+							  this.playPauseButton.onclick = () => {
+								if (this.playing) {
+								  this.pause();
+								} else {
+								  this.play();
+								}
+							  };
+
+							  this.nextButton.onclick = () => {
+								this.next();
+							  };
+
+							  this.audioElement.onended = () => {
+								this.next();
+							  }
+							}
+
+							play() {
+							  if (this.audioElement.src === this.playlist[0]) {
+								this.rotatePlaylist();
+							  }
+							  this.audioElement.play();
+							  this.playing = true;
+							  this.playSvg.style.display = 'none';
+							  this.pauseSvg.style.display = 'block';
+
+							}
+
+							pause() {
+							  this.audioElement.pause();
+							  this.playing = false;
+							  this.playSvg.style.display = 'block';
+							  this.pauseSvg.style.display = 'none';
+							}
+
+							next() {
+							  if (this.audioElement.src === this.playlist[0]) {
+								this.rotatePlaylist();
+							  }
+							  this.audioElement.src = this.rotatePlaylist();
+							  this.updateTitle();
+							  this.download.href = this.audioElement.src;
+							  this.play();
+							}
+
+							rotatePlaylist() {
+							  const first = this.playlist.shift();
+							  this.playlist.push(first);
+							  return first;
+							}
+
+							updateTitle() {
+							  let text = this.playlist[this.playlist.length - 1];
+							  text = text.substring(text.lastIndexOf('/') + 1);
+							  text = text.substring(0, text.indexOf('.'));
+							  this.titleDiv.innerText = text;
+							}
+						  }
+
+						  const playerInstance = new AudioPlayer(audioDiv);
+						}
+					</script>
+				</div><!-- end of music section -->
+			</div><!-- end of well -->
+    	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="heading1">
+			      <h4 class="panel-title">
+			        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+			          Kontakt
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+			      <div class="panel-body">
+              <p class="text-center">
+                <a class="btn btn-primary" role="button" href="mailto:veilingdistress@gmx.net?subject=Veiling Distress">
+                  <span class="glyphicon glyphicon-envelope"></span> Mail uns!
+                </a>
+                oder
+                <a class="btn btn-primary" role="button" href="https://www.facebook.com/veiling.distress" target="_blank">
+                 <span class="glyphicon glyphicon-new-window"></span> facebook
+                </a>
+              </p>
+              <p class="text-center">
+                veilingdistress@gmx.net
+              </p>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="panel panel-default">
+			    <div class="panel-heading" role="tab" id="heading2">
+			    	<h4 class="panel-title">
+			      	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+			          Links
+			        </a>
+		        </h4>
+			    </div>
+			    <div id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2">
+			      <div class="panel-body">
+
+			      	<div class="text-center"><!-- well well-sm -->
+				      	<div class="btn-group custom-btn-margin" role="group" aria-label="..."><!-- btn-group-lg -->
+				      		<a class="btn btn-primary" role="button" href="https://www.facebook.com/veiling.distress" target="_blank">
+							 			 <span class="glyphicon glyphicon-new-window"></span> facebook
+							 		</a>
+							 		<a class="btn btn-info" role="button" href="https://myspace.com/veiling.distress" target="_blank">
+							 			 <span class="glyphicon glyphicon-new-window"></span> Myspace
+							 		</a>
+				      	</div>
+			      	</div>
+
+							<div class="well well-lg">
+								<div id="share"></div>
+							</div>
+			      </div>
+			    </div>
+			  </div>
+			</div><!-- end of accordeon -->
+
+			<div class="well">
+			 	<dl class="dl-horizontal">
+				  <dt>Genre</dt>
+				  <dd>Melodic Death Metal</dd>
+				  <dt>Members</dt>
+				  <dd>1 x Drums, 2 x Guitars, 1 x Bass</dd>
+				  <dt>Hometown</dt>
+				  <dd>Rostock</dd>
+				</dl>
+    	</div><!-- end of well -->
+
+		</div><!-- end of col -->
+
+		<div class="col-xs-12 col-md-3">
+			<div class="panel panel-default"><!-- bio -->
+			  <div class="panel-heading">
+			    <h3 class="panel-title"><strong>Biografie</strong></h3>
+			  </div>
+			  <div class="panel-body">
+			    <p>
+				    <em>
+				    	Am grauen Strand, am grauen Meer<br>
+				    	Und seitab liegt die Stadt…
+						</em>
+					</p>
+					<p>
+						In Rostock gründete sich im Dezember 2006 die Gruppe „Acedia“.
+						Fünf Musiker fanden ihren Sound zwischen zähfließendem Doom
+						und den Harmonien im Melodic Death Metal. Es folgte der Gang
+						in die Shredsound Studios, wo die unveröffentlicht gebliebene
+						Demo-CD „Sorrow after Sunset“ (2008) entstand, die damals zugleich
+						auch den vorläufigen Schlusspunkt für das Projekt bedeutete.
+					</p>
+					<p>
+						Seit dem Jahr 2014 stehen Dennis (git), Stephan (git) und Marc
+						(dru) wieder zusammen am Equipment. Neue Songs entstehen – und
+						trotz höherem Tempo und der Brutalität von Blastbeats ist der
+						Sound der Vergangenheit noch immer Teil der Musik. Mit Fabian
+						(bass) kam von Ende 2015 bis Ende 2016 Verstärkung in den tiefen Oktaven hinzu. Seit 2017 füllt Paul (bass) diesen Frequenzbereich.
+						Eine passende menschliche Stimme wird in Zukunft das bisher
+						rein instrumentale Projekt komplettieren. Was jetzt in Rostock
+						entsteht, ist „Veiling Distress“.
+					</p>
+			  </div>
+			</div><!-- end of bio -->
+		</div><!-- end of col -->
+	</div><!-- end row -->
+</div><!-- end of container -->
+
+<!-- local imports -->
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="javascripts/socialshareprivacy.js"></script>
+<script type="text/javascript" src="javascripts/modules/facebook.js"></script>
+<script type="text/javascript" src="javascripts/modules/twitter.js"></script>
+<script type="text/javascript" src="js/audioplayer.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>
+^
