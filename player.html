@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Veiling Distress Music Player</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/player.css" rel="stylesheet">
+  <script src="js/player.js" defer></script>
+</head>
+<body>
+  <div id="audioPlayer">
+    <audio src="https://veilingd.github.io/sound/song1.mp3" controls></audio>
+    <div id="customControls">
+      <div class="gridItem" id="playPauseButton">
+        <svg id="play" viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="25 25 75 50 25 75" stroke="white" fill="white" stroke-width="5"/>
+        </svg><svg id="pause" viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <line x1="35" y1="25" x2="35" y2="75" stroke="white" stroke-width="5" />
+          <line x1="65" y1="25" x2="65" y2="75" stroke="white" stroke-width="5" />
+        </svg>
+      </div>
+      <div class="gridItem">
+        <svg id="nextButton" viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <line x1="35" y1="25" x2="60" y2="50" stroke="white" stroke-width="5" />
+          <line x1="35" y1="75" x2="60" y2="47" stroke="white" stroke-width="5" />
+          <line x1="65" y1="25" x2="65" y2="75" stroke="white" stroke-width="5" />
+        </svg>
+      </div>
+      <div class="gridItem">
+        <span id="songTitle">
+          song1
+        </span>
+      </div>
+      <div class="gridItem">
+        <a id="download" role="button" href="https://veilingd.github.io/sound/song1.mp3" download>
+          <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="25" x2="50" y2="75" stroke="white" stroke-width="5" />
+            <line x1="25" y1="50" x2="50" y2="75" stroke="white" stroke-width="5" />
+            <line x1="75" y1="50" x2="50" y2="75" stroke="white" stroke-width="5" />
+            <line x1="25" y1="75" x2="75" y2="75" stroke="white" stroke-width="5" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
