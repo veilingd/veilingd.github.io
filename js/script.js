@@ -3,10 +3,6 @@
 /* main runs upon document ready */
 var main = function() 
 {
-	//activate all players
-	$( '.isAudioPlayer' ).audioPlayer();
-	$( '#collapse2').removeClass('in');
-    
     // 2 click 'like'
     //defines the default order of the buttons
 	$.fn.socialSharePrivacy.settings.order = ['facebook', 'gplus', 'twitter', 'tumblr', 'reddit'];
@@ -44,7 +40,7 @@ var main = function()
 	
 	
     
-}
+};
 	
 // run main function on startup
 $(document).ready(main);
