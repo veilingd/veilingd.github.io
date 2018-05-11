@@ -3,7 +3,11 @@
 /* main runs upon document ready */
 var main = function() {
 	//activate all players
-	$( '.isAudioPlayer' ).audioPlayer();
+	try {
+	    $( '.isAudioPlayer' ).audioPlayer();
+    } catch {
+
+    }
 	$( '#collapse2').removeClass('in');
 
     // 2 click 'like'
