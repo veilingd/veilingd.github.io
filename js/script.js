@@ -1,21 +1,16 @@
 /* TODO add instructions */
 
 /* main runs upon document ready */
-var main = function() 
-{
+var main = function() {
     // 2 click 'like'
     //defines the default order of the buttons
 	$.fn.socialSharePrivacy.settings.order = ['facebook', 'gplus', 'twitter', 'tumblr', 'reddit'];
 	$.fn.socialSharePrivacy.settings.path_prefix = '../';
- //	$('#socialshareprivacy').socialSharePrivacy({uri: 'http://veilingd.herokuapp.com/'});
-    
+
     $('#share').socialSharePrivacy({
 		perma_option: false,
-		//uri: 'http://www.example.com/',
 		uri: 'https://www.facebook.com/veiling.distress/',
-		//info_link_target: '_blank',
 		layout: window.innerWidth < 480 ? 'box' : 'line'
-		//layout: 'line'
 	});
     
 	$(window).resize(function () {
@@ -26,7 +21,6 @@ var main = function()
 			$share.socialSharePrivacy('destroy').socialSharePrivacy({
 				perma_option: false,
 				uri: 'https://www.facebook.com/veiling.distress/',
-				//info_link_target: '_blank',
 				layout: layout
 			});
 
@@ -37,9 +31,6 @@ var main = function()
 			}
 		}
 	});
-	
-	
-    
 };
 	
 // run main function on startup
