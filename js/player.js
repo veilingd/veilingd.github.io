@@ -44,7 +44,7 @@ class AudioPlayer {
 	}
 
 	play() {
-		if (this.audioElement.src === this.playlist[0]) {
+		if (this.audioElement.src === `${location.protocol}//${location.host}/${this.playlist[0]}`) {
 			this.rotatePlaylist();
 		}
 		this.audioElement.play();
@@ -62,7 +62,7 @@ class AudioPlayer {
 	}
 
 	next() {
-		if (this.audioElement.src === this.playlist[0]) {
+		if (this.audioElement.src === `${location.protocol}//${location.host}/${this.playlist[0]}`) {
 			this.rotatePlaylist();
 		}
 		this.audioElement.src = this.rotatePlaylist();
