@@ -15,19 +15,43 @@ class AudioPlayer {
 		this.customControls.style.display = 'grid';
 
 		// initialize state
-		this.playing = false;
+		this.state = {
+			playing: false,
+			currentItem: this.audioElement.src,
+			playlist: [
+				'sound/song1.mp3',
+				'sound/song2.mp3',
+				'sound/song3.mp3',
+				'sound/song4.mp3'
+			]
+		};
 		this.registerEvents();
-		this.playlist = [
-			'sound/song1.mp3',
-			'sound/song2.mp3',
-			'sound/song3.mp3',
-			'sound/song4.mp3'
-		]
+	}
+
+	reduce(state, action) {
+		switch(action.type) {
+			case 'got:playing':
+				return Object.assign({}, state, {playing: true});
+			case 'got:paused':
+				return Object.assign({}, state, {playing: false});
+			case 'got:next':
+				const playlist = state.playlist.slice();
+				if (this.audioElement.src === `${location.protocol}//${location.host}/${this.state.playlist[0]}`) {
+					playlist.push(playlist.shift());
+				}
+                const nextItem = playlist.shift();
+                playlist.push(nextItem);
+				return Object.assign({}, state, {currentItem: nextItem, playlist: playlist});
+			case 'got:error':
+				return Object.assign({}, state, {playing: false});
+			default:
+				return state;
+		}
 	}
 
 	registerEvents() {
 		this.playPauseButton.onclick = () => {
-			if (this.playing) {
+			if (this.state.playing) {
 				this.pause();
 			} else {
 				this.play();
@@ -40,48 +64,56 @@ class AudioPlayer {
 
 		this.audioElement.onended = () => {
 			this.next();
-		}
+		};
+
+		this.audioElement.onplaying = () => {
+			this.state = this.reduce(this.state, {type: 'got:playing'});
+			if (this.state.playing) {
+				this.playSvg.style.display = 'none';
+				this.pauseSvg.style.display = 'initial';
+			}
+		};
+
+		this.audioElement.onerror = (e) => {
+			this.playSvg.style.display = 'initial';
+			this.pauseSvg.style.display = 'none';
+			this.error(e);
+		};
 	}
 
 	play() {
-		if (this.audioElement.src === `${location.protocol}//${location.host}/${this.playlist[0]}`) {
-			this.rotatePlaylist();
-		}
-		this.audioElement.play();
-		this.playing = true;
-		this.playSvg.style.display = 'none';
-		this.pauseSvg.style.display = 'initial';
+		this.audioElement.play().then(() => {
 
+        }).catch(() => {
+        	this.error();
+        });
 	}
 
 	pause() {
 		this.audioElement.pause();
-		this.playing = false;
+		this.state = this.reduce(this.state, {type: 'got:paused'});
 		this.playSvg.style.display = 'initial';
 		this.pauseSvg.style.display = 'none';
 	}
 
 	next() {
-		if (this.audioElement.src === `${location.protocol}//${location.host}/${this.playlist[0]}`) {
-			this.rotatePlaylist();
-		}
-		this.audioElement.src = this.rotatePlaylist();
+		this.state = this.reduce(this.state, {type: 'got:next'});
+		this.audioElement.src = this.state.currentItem;
 		this.updateTitle();
 		this.download.href = this.audioElement.src;
 		this.play();
 	}
 
-	rotatePlaylist() {
-		const first = this.playlist.shift();
-		this.playlist.push(first);
-		return first;
-	}
-
 	updateTitle() {
-		let text = this.playlist[this.playlist.length - 1];
+		let text = this.state.playlist[this.state.playlist.length - 1];
 		text = text.substring(text.lastIndexOf('/') + 1);
 		text = text.substring(0, text.indexOf('.'));
 		this.titleDiv.innerText = text;
+	}
+
+	error() {
+		this.state = this.reduce(this.state, {type: 'got:error'});
+		this.titleDiv.innerText = `error`;
 	}
 }
 
