@@ -1,6 +1,7 @@
 class AudioPlayer {
 	constructor(audioDiv) {
 	    if (navigator.userAgent.indexOf('Edge') !== -1) return; // TODO replace with feature detection
+
 		// prepare element vars
 		this.audioElement = audioDiv.querySelector('audio');
 		this.customControls = document.getElementById('customControls');
@@ -20,10 +21,10 @@ class AudioPlayer {
 			playing: false,
 			currentItem: this.audioElement.src,
 			playlist: [
-				'sound/song1.mp3',
-				'sound/song2.mp3',
+				'sound/song4.mp3',
 				'sound/song3.mp3',
-				'sound/song4.mp3'
+				'sound/song2.mp3',
+				'sound/song1.mp3'
 			]
 		};
 		this.registerEvents();
