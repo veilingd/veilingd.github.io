@@ -1,5 +1,6 @@
 class AudioPlayer {
 	constructor(audioDiv) {
+	    if (navigator.userAgent.indexOf('Edge') !== -1) return; // TODO replace with feature detection
 		// prepare element vars
 		this.audioElement = audioDiv.querySelector('audio');
 		this.customControls = document.getElementById('customControls');
