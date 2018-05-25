@@ -21,23 +21,17 @@ img
 	margin-bottom: 3.0em;
 }
 
-.custom-padding /* align the song names with the download buttons */
-{
-	padding-top: 0.5em;
-}
-.custom-margin /* for mobile: some space between accordeon and song section */
+.custom-margin-top
 {
 	margin-top: 1.5em;
 }
-.custom-btn-margin
+.custom-margin-bottom
 {
     margin-bottom: 1.0em;
 }
-#infos a, #infos h3 /* used to override the link and heading colors */
-{
-	color: #1c94c4;
-}
-.squareList
-{
-    list-style-type: square;
+iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
 }
