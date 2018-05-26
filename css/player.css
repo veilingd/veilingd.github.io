@@ -11,10 +11,19 @@ svg {
     padding-top: 4px;
     width: 32px;
     height: 32px;
+
 }
+
 .gridItem {
     text-align: center;
     cursor: pointer;
+	-webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.gridItem::selection {
+    background: none;
 }
 .gridItem a {
     display: contents;
