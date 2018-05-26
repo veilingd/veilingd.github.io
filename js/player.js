@@ -16,6 +16,13 @@ class AudioPlayer {
 		this.audioElement.removeAttribute('controls');
 		this.customControls.style.display = 'grid';
 
+		this.songTitleLookup = {
+			'song1': 'Song 1',
+			'song2': 'Song 2',
+			'song3': 'Song 3',
+			'song4': 'Song 4',
+		};
+
 		// initialize state
 		this.state = {
 			playing: false,
@@ -44,8 +51,6 @@ class AudioPlayer {
                 const nextItem = playlist.shift();
                 playlist.push(nextItem);
 				return Object.assign({}, state, {currentItem: nextItem, playlist: playlist});
-			case 'got:error':
-				return Object.assign({}, state, {playing: false});
 			default:
 				return state;
 		}
@@ -70,24 +75,26 @@ class AudioPlayer {
 
 		this.audioElement.onplaying = () => {
 			this.state = this.reduce(this.state, {type: 'got:playing'});
-			if (this.state.playing) {
-				this.playSvg.style.display = 'none';
-				this.pauseSvg.style.display = 'initial';
-			}
+			this.playSvg.style.display = 'none';
+			this.pauseSvg.style.display = 'initial';
 		};
 
 		this.audioElement.onerror = (e) => {
-			this.playSvg.style.display = 'initial';
-			this.pauseSvg.style.display = 'none';
-			this.error(e);
+			if (!this.state.playing) {
+				this.playSvg.style.display = 'initial';
+				this.pauseSvg.style.display = 'none';
+			}
+			console.log('audioElement error occurred.');
+			console.error(e);
 		};
 	}
 
 	play() {
 		this.audioElement.play().then(() => {
 
-        }).catch(() => {
-        	this.error();
+        }).catch((e) => {
+        	console.log('audioElement#play unsuccessful.')
+        	console.error(e);
         });
 	}
 
@@ -101,21 +108,17 @@ class AudioPlayer {
 	next() {
 		this.state = this.reduce(this.state, {type: 'got:next'});
 		this.audioElement.src = this.state.currentItem;
+		this.audioElement.load();
 		this.updateTitle();
 		this.download.href = this.audioElement.src;
 		this.play();
 	}
 
 	updateTitle() {
-		let text = this.state.playlist[this.state.playlist.length - 1];
-		text = text.substring(text.lastIndexOf('/') + 1);
-		text = text.substring(0, text.indexOf('.'));
-		this.titleDiv.innerText = text;
-	}
-
-	error() {
-		this.state = this.reduce(this.state, {type: 'got:error'});
-		this.titleDiv.innerText = `error`;
+		let filename = this.state.playlist[this.state.playlist.length - 1];
+		filename = filename.substring(filename.lastIndexOf('/') + 1);
+		filename = filename.substring(0, filename.lastIndexOf('.'));
+		this.titleDiv.innerText = this.songTitleLookup[filename];
 	}
 }
 
