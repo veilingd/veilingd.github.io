@@ -1,7 +1,5 @@
 class AudioPlayer {
 	constructor(audioDiv) {
-	    if (navigator.userAgent.indexOf('Edge') !== -1) return; // TODO replace with feature detection
-
 		// prepare element vars
 		this.audioElement = audioDiv.querySelector('audio');
 		this.customControls = document.getElementById('customControls');
@@ -123,6 +121,7 @@ class AudioPlayer {
 }
 
 window.onload = () => {
+    if (navigator.userAgent.indexOf('Edge') !== -1) return; // TODO replace with feature detection
 	const audioDiv = document.getElementById('audioPlayer');
 	const playerInstance = new AudioPlayer(audioDiv);
 };
