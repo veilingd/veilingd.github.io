@@ -121,7 +121,6 @@ class AudioPlayer {
 }
 
 window.onload = () => {
-    if (navigator.userAgent.indexOf('Edge') !== -1) return; // TODO replace with feature detection
-	const audioDiv = document.getElementById('audioPlayer');
+	const audioDiv = document.querySelector('#audioPlayer');
 	const playerInstance = new AudioPlayer(audioDiv);
 };
