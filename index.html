@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-
 	<title>Veiling Distress</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +8,21 @@
 	<meta name="description" content="Veiling Distress Band Website">
 	<meta name="author" content="Veiling Distress">
 	<link rel="icon" href="img/favicon.ico">
-	<link rel="canonical" href="https://veilingd.github.io/">
+	<link rel="canonical" href="https://veilingdistress.de/">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
 </head>
 <body>
-
 <div class="container-fluid">
 
 	<div class="row">
 		<div class="col-xs-12 col-md-12 custom-margin-top">
-			<img class="img-responsive img-rounded center-block" src="img/logo.jpg" alt="Veiling Distress logo">
+			<img
+				id="logo"
+				class="img-responsive img-rounded center-block"
+				src="img/logo.jpg"
+				alt="Veiling Distress logo">
 		</div>
 	</div>
 
@@ -31,7 +32,7 @@
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<div class="text-center custom-margin-bottom">
-				<iframe style="width: 280px; height: 40px;" src="player.html"></iframe>
+				<iframe id="player" src="player.html"></iframe>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -67,8 +68,11 @@
 					<h3 class="panel-title"><strong>Verbreitung</strong></h3>
 				</div>
 				<div class="panel-body">
-					<div class="well well-lg">
-						<div id="share"></div>
+					<div class="text-center">
+						<img
+							id="fb-dummy-image"
+							src="img/dummy_facebook.png"
+						>
 					</div>
 				</div>
 			</div>
@@ -83,8 +87,8 @@
 					<p>
 						Ehemalige:
 						<dl class="dl-horizontal">
-							<dt></dt><dd>Fabian (bas)</dd>
-							<dt>2017-2019</dt><dd>Eike (voc)</dd>
+							<dt>...</dt><dd>Fabian (bas)</dd>
+							<dt>2017 &mdash; 2019</dt><dd>Eike (voc)</dd>
 							<dt>2019</dt><dd>Friedi (key)</dd>
 						</dl>
 					</p>
@@ -98,9 +102,6 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="javascripts/socialshareprivacy.js"></script>
-<script type="text/javascript" src="javascripts/modules/facebook.js"></script>
-<script type="text/javascript" src="javascripts/modules/twitter.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
 </body>

@@ -1,6 +1,39 @@
+iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.custom-margin-top {
+	margin-top: 1.5em;
+}
+
+.custom-margin-bottom {
+    margin-bottom: 1.0em;
+}
+
+#logo {
+    margin-top: 1.5em;
+	margin-bottom: 3.0em;
+}
+
+#player {
+    width: 280px;
+    height: 40px;
+}
+
+#fb-dummy-image {
+    margin-bottom: 5px;
+}
+
+#fb-like-iframe {
+    width: 80px;
+    height: 20px;
+}
+
 @media (min-width: 762px) {
-    body
-    {
+    body {
         background: url(/img/background.jpeg);
         background-repeat: no-repeat;
         background-position: right top;
@@ -9,29 +42,8 @@
     }
 }
 @media (max-width: 761px) {
-    body
-    {
+    body {
         background: #C0C0C0;
         background: linear-gradient(hsla(30, 0%, 100%, 1), hsla(0, 0%, 0%, 1));
     }
-}
-img 
-{
-    margin-top: 1.5em;
-	margin-bottom: 3.0em;
-}
-
-.custom-margin-top
-{
-	margin-top: 1.5em;
-}
-.custom-margin-bottom
-{
-    margin-bottom: 1.0em;
-}
-iframe {
-    background-color: transparent;
-    border: 0px none transparent;
-    padding: 0px;
-    overflow: hidden;
 }
