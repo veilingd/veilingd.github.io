@@ -101,8 +101,17 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script>
+	let fbDummy = document.querySelector('#fb-dummy-image');
+    fbDummy.onclick = () => {
+        let parent = fbDummy.parentElement;
+        let fbIframe = document.createElement('iframe');
+        fbIframe.id = 'fb-like-iframe'
+        fbIframe.src = `https://www.facebook.com/plugins/like.php?locale=en_GB&href=https%3A%2F%2Fwww.facebook.com%2Fveiling.distress%2F&send=false&show_faces=false&action=like&colorscheme=light&width=80&height=20&layout=button_count`
+        parent.appendChild(fbIframe);
+        parent.removeChild(fbDummy);
+    };
+</script>
 
 </body>
 </html>
