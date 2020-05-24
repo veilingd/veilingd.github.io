@@ -41,6 +41,7 @@ iframe {
         background-size: cover;
     }
 }
+
 @media (max-width: 761px) {
     body {
         background: #C0C0C0;

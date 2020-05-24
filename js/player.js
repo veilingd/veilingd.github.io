@@ -18,7 +18,7 @@ class AudioPlayer {
 			'song1': 'Song 1',
 			'song2': 'Song 2',
 			'song3': 'Song 3',
-			'song4': 'Song 4',
+			'song4': 'Song 4'
 		};
 
 		// initialize state
