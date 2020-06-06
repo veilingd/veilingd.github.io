@@ -80,7 +80,9 @@
 				<div class="card-header">Konzert</div>
 				<div class="card-body">
 					<p>Im Dezember 2020 beim Aviator Alarm im <a href="http://www.bunker-rostock.de">Bunker Rostock</a>.</p>
-					<p class="card-text"><small class="text-muted">Aktueller Stand Mai 2020</small></p>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+					</div>
 				</div>
 			</div>
 			<div class="card mb-3">
@@ -118,10 +120,29 @@
 </div>
 
 <script>
-	let fbDummy = document.querySelector('#fb-dummy-image');
+	// set progress bar
+	setTimeout(() => {
+		const targetMonth = 11; // is month December
+		const date = new Date();
+		const currentYear = date.getYear();
+		const currentMonth = date.getMonth();
+		const p = document.querySelector('.progress-bar');
+		let value = parseInt(currentMonth / targetMonth * 100);
+		if (currentYear > 120) { // 120 is year 2020
+			value = 100; // full progress bar
+		} else {
+			const diff = targetMonth - currentMonth;
+			p.textContent = diff === 0 ? 'diesen Monat' : `noch ${diff} Monat${diff === 1 ? '' : 'e'}`;
+		}
+		p.setAttribute('aria-valuenow', `${value}`);
+		p.style.width = `${value}%`;
+	}, 1000);
+
+	// enable fb activation
+	const fbDummy = document.querySelector('#fb-dummy-image');
     fbDummy.onclick = () => {
-        let parent = fbDummy.parentElement;
-        let fbIframe = document.createElement('iframe');
+        const parent = fbDummy.parentElement;
+        const fbIframe = document.createElement('iframe');
         fbIframe.id = 'fb-like-iframe'
         fbIframe.src = `https://www.facebook.com/plugins/like.php?locale=en_GB&href=https%3A%2F%2Fwww.facebook.com%2Fveiling.distress%2F&send=false&show_faces=false&action=like&colorscheme=light&width=80&height=20&layout=button_count`
         parent.appendChild(fbIframe);
