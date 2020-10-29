@@ -79,10 +79,7 @@
 			<div class="card mb-3">
 				<div class="card-header">Konzert</div>
 				<div class="card-body">
-					<p>Am 5. Dezember 2020 beim Aviator Alarm im <a href="http://www.bunker-rostock.de">Bunker Rostock</a>.</p>
-					<div class="progress">
-						<div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
-					</div>
+					<p>Der Aviator Alarm 2020 im <a href="http://www.bunker-rostock.de">Bunker Rostock</a> wurde verschoben. Der neue Termin findet sich bald hier.</p>
 				</div>
 			</div>
 			<div class="card mb-3">
@@ -126,24 +123,6 @@
 </div>
 
 <script>
-	// set progress bar
-	setTimeout(() => {
-		const targetMonth = 11; // is month December
-		const date = new Date();
-		const currentYear = date.getYear();
-		const currentMonth = date.getMonth();
-		const p = document.querySelector('.progress-bar');
-		let value = parseInt(currentMonth / targetMonth * 100);
-		if (currentYear > 120) { // 120 is year 2020
-			value = 100; // full progress bar
-		} else {
-			const diff = targetMonth - currentMonth;
-			p.textContent = diff === 0 ? 'diesen Monat' : `noch ${diff} Monat${diff === 1 ? '' : 'e'}`;
-		}
-		p.setAttribute('aria-valuenow', `${value}`);
-		p.style.width = `${value}%`;
-	}, 1000);
-
 	// enable fb activation
 	const fbDummy = document.querySelector('#fb-dummy-image');
     fbDummy.onclick = () => {
