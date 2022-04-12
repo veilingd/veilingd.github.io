@@ -79,7 +79,10 @@
 			<div class="card mb-3">
 				<div class="card-header">Konzert</div>
 				<div class="card-body">
-					<p>Der Aviator Alarm 2020 im <a href="http://www.bunker-rostock.de">Bunker Rostock</a> wurde verschoben. Der neue Termin findet sich bald hier.</p>
+					<p>
+						Für 2022 ist ein Sommerkonzert im <a href="http://www.bunker-rostock.de" target="_blank">Bunker Rostock</a> geplant.
+						Wann genau das stattfindet, steht dann hier und dort im <a href="http://www.bunker-rostock.de/programm.php" target="_blank">Programm</a>.
+					</p>
 				</div>
 			</div>
 			<div class="card mb-3">
@@ -125,14 +128,14 @@
 <script>
 	// enable fb activation
 	const fbDummy = document.querySelector('#fb-dummy-image');
-    fbDummy.onclick = () => {
-        const parent = fbDummy.parentElement;
-        const fbIframe = document.createElement('iframe');
-        fbIframe.id = 'fb-like-iframe'
-        fbIframe.src = `https://www.facebook.com/plugins/like.php?locale=en_GB&href=https%3A%2F%2Fwww.facebook.com%2Fveiling.distress%2F&send=false&show_faces=false&action=like&colorscheme=light&width=80&height=20&layout=button_count`
-        parent.appendChild(fbIframe);
-        parent.removeChild(fbDummy);
-    };
+	fbDummy.onclick = () => {
+		const parent = fbDummy.parentElement;
+		const fbIframe = document.createElement('iframe');
+		fbIframe.id = 'fb-like-iframe'
+			fbIframe.src = `https://www.facebook.com/plugins/like.php?locale=en_GB&href=https%3A%2F%2Fwww.facebook.com%2Fveiling.distress%2F&send=false&show_faces=false&action=like&colorscheme=light&width=80&height=20&layout=button_count`
+		parent.appendChild(fbIframe);
+		parent.removeChild(fbDummy);
+	};
 </script>
 
 </body>
