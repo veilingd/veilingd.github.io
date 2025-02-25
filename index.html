@@ -87,23 +87,12 @@
 				<div class="card-body">
 					<p>
 						<a class="btn btn-primary" role="button" href="mailto:veilingdistress@gmx.net?subject=Veiling Distress">Mail uns!</a>
-						oder
-						<a href="https://www.facebook.com/veiling.distress" target="_blank">facebook</a>
 					</p>
 					<p>veilingdistress@gmx.net</p>
 				</div>
 			</div>
 		</div>
 		<div class="col-md-6">
-			<div class="card mb-3">
-				<div class="card-header">Verbreitung</div>
-				<div class="card-body">
-					<img
-						id="fb-dummy-image"
-						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAUCAMAAAD84U6VAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wGGgACCssvvzMAAADwUExURerq6uHh4eDg4ODg4N/f39ra2mRkZGZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW9vb3BwcHFxcXJycnR0dHZ2dnh4eHl5eXx8fH5+fn9/f4CAgIGBgYKCgoWFhYeHh4iIiImJiYuLi4yMjI6OjpCQkJGRkZKSkpOTk5WVlZeXl6Ojo6ampqenp7KysrOzs729vb6+vr+/v8DAwMHBwcPDw8bGxsjIyMnJyc7Ozs/Pz9DQ0NHR0dPT09jY2Nra2t3d3d7e3t/f3+Hh4eLi4uPj4+Tk5Obm5unp6erq6uvr6+zs7O3t7fDw8PT09Pz8/P///3xL2vEAAAAGdFJOUwzHyMnL/YTUGCMAAAEPSURBVCjPlZMLT8IwEIALOti6+RjjHEKHIA4Qn/hG3ZCJCnLS//9v7IQQyzRpvzTNtbkv6bU9QjaNSBljg5D8aIbKzEZ5YmjkC8MgEWoRLYW6/YNlFmldSVjk29Dplqm6QL1bzo+LYpm46ebbwTL4T7DYPD71rZXwO/hTcAJ+WaD2Kk/MYgzgBcftSu0iI2w9TfjXe8uUhbj8jNi8xtedOCPcjzkOm7KwvddHnDiMMbjJ3lLAryxn7UhhB/HTSdZroCkm4/0CpbLwUTlDPDyZTgeSUKoK9rv8zq+W0lQbAM4XRQ+9R0zaUOtJAoSCo978oRWC0sM13BQv8HfdhpKg8fm0v7dmA+VEy+m0aI58Az4458ga6pYSAAAAAElFTkSuQmCC"
-					>
-				</div>
-			</div>
 			<div class="card mb-3">
 				<div class="card-header">Biografie</div>
 				<div class="card-body">
@@ -115,19 +104,5 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	// enable fb activation
-	const fbDummy = document.querySelector('#fb-dummy-image');
-	fbDummy.onclick = () => {
-		const parent = fbDummy.parentElement;
-		const fbIframe = document.createElement('iframe');
-		fbIframe.id = 'fb-like-iframe'
-			fbIframe.src = `https://www.facebook.com/plugins/like.php?locale=en_GB&href=https%3A%2F%2Fwww.facebook.com%2Fveiling.distress%2F&send=false&show_faces=false&action=like&colorscheme=light&width=80&height=20&layout=button_count`
-		parent.appendChild(fbIframe);
-		parent.removeChild(fbDummy);
-	};
-</script>
-
 </body>
 </html>
